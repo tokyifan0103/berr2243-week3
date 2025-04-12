@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ride Management</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input, select, button {
+      padding: 6px;
+      margin: 6px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    th {
+      background: #f4f4f4;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ride Management Dashboard</h1>
+
+  <h2>Create New Ride</h2>
+  <form id="rideForm">
+    <input type="text" id="pickupLocation" placeholder="Pickup Location" required />
+    <input type="text" id="destination" placeholder="Destination" required />
+    <input type="text" id="driverId" placeholder="Driver ID" required />
+    <select id="status" required>
+      <option value="">Select Status</option>
+      <option value="scheduled">Scheduled</option>
+      <option value="ongoing">Ongoing</option>
+      <option value="completed">Completed</option>
+    </select>
+    <button type="submit">Add Ride</button> <!-- Add Ride button -->
+  </form>
+
+  <h2>All Rides</h2>
+  <table id="ridesTable">
+    <thead>
+      <tr>
+        <th>Pickup</th>
+        <th>Destination</th>
+        <th>Driver</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>
